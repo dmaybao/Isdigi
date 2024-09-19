@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module vacio(F_EMPTY_N, F_FULL_N, WRITE, READ, DATA_IN, DATA_OUT, COUNT, clk, RSTn);
 
 input READ, WRITE, RSTn, clk;
@@ -32,4 +33,40 @@ if (WRITE == 1'b1)
 
 
 
+=======
+module vacio(F_EMPTY_N, F_FULL_N, WRITE, READ, DATA_IN, DATA_OUT, COUNT, clk, RSTn);
+
+input READ, WRITE, RSTn, clk;
+input [7:0] DATA_IN;
+
+output F_FULL_N, F_EMPTY_N;
+output [7:0] DATA_OUT;
+
+wire state = {WRITE, READ}
+wire[7:0] SHIFT 
+
+wire s0 = 2'b00;
+wire s1 = 2'b01;
+wire s2 = 2'b10;
+wire s3 = 2'b11;
+
+
+always @(posedge clk or negedge RSTn)
+
+if (WRITE == 1'b1)
+	if(READ == 1'b1)
+		begin
+		DATA_OUT <= DATA_IN;
+		end
+	else
+		COUNT <= COUNT + 1'b1;
+		SHIFT()
+		
+		
+		
+
+
+
+
+>>>>>>> e99947d70da2da51086db8548407630d59b0de8b
 endmodule 

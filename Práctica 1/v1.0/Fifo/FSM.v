@@ -14,7 +14,7 @@
 // Additional Comments:
 // - NO ES SINCRONO CON EL RELOJ
 //-----------------------------------------------------------------------------
-module vacio(F_EMPTY_N, F_FULL_N, WRITE, READ, DATA_IN, DATA_OUT, COUNT, clk, RSTn);
+module FSM (F_EMPTY_N, F_FULL_N, WRITE, READ, DATA_IN, DATA_OUT, COUNT, clk, RSTn);
 
 input READ, WRITE, RSTn, clk;
 input [7:0] DATA_IN;

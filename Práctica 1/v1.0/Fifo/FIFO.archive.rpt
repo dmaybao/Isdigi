@@ -1,5 +1,5 @@
 Archive Project report for FIFO
-Thu Sep 19 17:49:08 2024
+Thu Sep 19 20:17:32 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Sep 19 17:49:08 2024 ;
+; Archive Project Status ; Successful - Thu Sep 19 20:17:32 2024 ;
 ; Revision Name          ; FIFO                                  ;
 ; Top-level Entity Name  ; FIFO                                  ;
 ; Family                 ; Cyclone IV E                          ;
@@ -55,11 +55,8 @@ Critical Warning: Analysis & Elaboration was not run successfully.
 Warning (225010): Analysis was not performed on the current project. The Quartus Prime software may not be able to automatically locate all project files.
 Info: Parsing: CONTROLPATH.v
 Info: Parsing: counter.v
-Info: Parsing: lleno.v
-Info: Parsing: otros.v
-Info: Parsing: ram_dp.v
-Info: Parsing: shifter_2d_var.v
 Info: Parsing: vacio.v
+Info: Parsing: FSM.v
 Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/
 Info: ----------------------------------------------------------
@@ -69,10 +66,10 @@ Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'FIFO.archive.rpt'
 Error (23031): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
-Error: Quartus Prime Shell was unsuccessful. 18 errors, 7 warnings
-    Error: Peak virtual memory: 4855 megabytes
-    Error: Processing ended: Thu Sep 19 17:49:08 2024
-    Error: Elapsed time: 00:00:13
+Error: Quartus Prime Shell was unsuccessful. 30 errors, 7 warnings
+    Error: Peak virtual memory: 4854 megabytes
+    Error: Processing ended: Thu Sep 19 20:17:32 2024
+    Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:24
 
 
@@ -81,6 +78,7 @@ Error: Quartus Prime Shell was unsuccessful. 18 errors, 7 warnings
 +-----------------------------------------------------------------------------------------+
 ; File Name                                                                               ;
 +-----------------------------------------------------------------------------------------+
+; __FIFO.auto.qarlog                                                                      ;
 ; c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf                            ;
 ; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.flow.rpt    ;
 ; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.rpt     ;
@@ -88,9 +86,12 @@ Error: Quartus Prime Shell was unsuccessful. 18 errors, 7 warnings
 ; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.summary ;
 ; CONTROLPATH.v                                                                           ;
 ; counter.v                                                                               ;
+; FIFO.archive.rpt                                                                        ;
+; FIFO.qarlog                                                                             ;
 ; FIFO.qpf                                                                                ;
 ; FIFO.qsf                                                                                ;
 ; FIFO.sv                                                                                 ;
+; FSM.v                                                                                   ;
 ; lleno.v                                                                                 ;
 ; otros.v                                                                                 ;
 ; ram_dp.v                                                                                ;

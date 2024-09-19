@@ -1,5 +1,5 @@
 Flow report for FIFO
-Thu Sep 19 17:49:07 2024
+Thu Sep 19 20:17:31 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Thu Sep 19 17:49:07 2024      ;
+; Flow Status                        ; Flow Failed - Thu Sep 19 20:17:31 2024      ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; FIFO                                        ;
 ; Top-level Entity Name              ; FIFO                                        ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/19/2024 17:48:58 ;
+; Start date & time ; 09/19/2024 20:17:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FIFO                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 149973178673620.172676093808088        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 149973178673620.172676984203740        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; QuestaSim (Verilog)                    ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,8 +94,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4709 MB             ; 00:00:22                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4708 MB             ; 00:00:23                           ;
+; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:23                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

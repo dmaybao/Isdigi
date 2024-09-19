@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/__FIFO.auto.qarlog
 
 Archive:	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/__FIFO.auto.qar
-Date:		Thu Sep 19 17:49:08 2024
+Date:		Thu Sep 19 20:17:32 2024
 Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -11,8 +11,12 @@ C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.smsg
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.summary
 CONTROLPATH.v
+FIFO.archive.rpt
+FIFO.qarlog
 FIFO.qsf
 FIFO.sv
+FSM.v
+__FIFO.auto.qarlog
 c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
 counter.v
 lleno.v
@@ -20,7 +24,7 @@ otros.v
 ram_dp.v
 shifter_2d_var.v
 vacio.v
-	======= Total: 15 files to archive =======
+	======= Total: 19 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

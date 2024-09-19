@@ -1,0 +1,101 @@
+Archive Project report for FIFO
+Thu Sep 19 17:49:08 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Sep 19 17:49:08 2024 ;
+; Revision Name          ; FIFO                                  ;
+; Top-level Entity Name  ; FIFO                                  ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Warning (292006): Can't contact license server "1717@158.42.250.86" -- this server will be ignored.
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Critical Warning: Analysis & Elaboration was not run successfully.
+    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
+Warning (225010): Analysis was not performed on the current project. The Quartus Prime software may not be able to automatically locate all project files.
+Info: Parsing: CONTROLPATH.v
+Info: Parsing: counter.v
+Info: Parsing: lleno.v
+Info: Parsing: otros.v
+Info: Parsing: ram_dp.v
+Info: Parsing: shifter_2d_var.v
+Info: Parsing: vacio.v
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'FIFO.archive.rpt'
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 18 errors, 7 warnings
+    Error: Peak virtual memory: 4855 megabytes
+    Error: Processing ended: Thu Sep 19 17:49:08 2024
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:24
+
+
++-----------------------------------------------------------------------------------------+
+; Files Archived                                                                          ;
++-----------------------------------------------------------------------------------------+
+; File Name                                                                               ;
++-----------------------------------------------------------------------------------------+
+; c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf                            ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.flow.rpt    ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.rpt     ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.smsg    ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.summary ;
+; CONTROLPATH.v                                                                           ;
+; counter.v                                                                               ;
+; FIFO.qpf                                                                                ;
+; FIFO.qsf                                                                                ;
+; FIFO.sv                                                                                 ;
+; lleno.v                                                                                 ;
+; otros.v                                                                                 ;
+; ram_dp.v                                                                                ;
+; shifter_2d_var.v                                                                        ;
+; vacio.v                                                                                 ;
++-----------------------------------------------------------------------------------------+
+
+

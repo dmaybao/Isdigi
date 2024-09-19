@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.qarlog
+
+Archive:	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.qar
+Date:		Thu Sep 19 17:49:08 2024
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/CONTROLPATH.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.qpf
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.qsf
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FIFO.sv
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/counter.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/lleno.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/otros.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.flow.rpt
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.rpt
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.smsg
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/output_files/FIFO.map.summary
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/ram_dp.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/shifter_2d_var.v
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/vacio.v
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

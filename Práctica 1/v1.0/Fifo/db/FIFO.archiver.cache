@@ -1,20 +1,15 @@
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/FSM.v
-ts:1726766163
+file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv
+ts:1726816212
 init:
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/CONTROLPATH.v
-ts:1726769840
+file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv
+ts:1726819157
 init:
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/lleno.v
-ts:1726760713
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/shifter_2d_var.v
-ts:1726760812
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/vacio.v
-ts:1726766162
+file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv
+ts:1726816922
 init:
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/otros.v
-ts:1726760787
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/ram_dp.v
-ts:1726760783
-file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/Fifo/counter.v
-ts:1726766164
+file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv
+ts:1726817726
+init:
+file:C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv
+ts:1726816226
 init:

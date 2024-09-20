@@ -1,7 +1,0 @@
-module CONTROLPATH (CLK, RSTn, CLEAR_N, READ, WRITE, F_FULL_N, F_EMPTY_N, USE_DW);
-input	CLK, RSTn, CLEAR_N. READ, WRITE;
-output F_FULL_N, F_EMPTY_N, USE_DW; 
-
-
-
-endmodule 

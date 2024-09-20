@@ -16,8 +16,19 @@
 //-----------------------------------------------------------------------------
 
 module CONTROLPATH (CLK, RSTn, CLEAR_N, READ, WRITE, F_FULL_N, F_EMPTY_N, USE_DW);
-input	CLK, RSTn, CLEAR_N. READ, WRITE;
+input	CLK, RSTn, CLEAR_N, READ, WRITE;
 output F_FULL_N, F_EMPTY_N, USE_DW; 
+
+.counter counter( //CLK, RSTn, ENABLE, COUNT, TC, UP_DOWN
+	.CLK(CLK),
+	.RSTn(RSTn),
+	.ENABLE(ENABLE),
+	.COUNT(COUNT),
+	.TC(TC),
+	.UP_DOWN(UP_DOWN)
+	);
+	
+.FMS FSM( 
 
 
 

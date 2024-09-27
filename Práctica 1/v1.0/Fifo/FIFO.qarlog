@@ -1,28 +1,19 @@
 Quartus Prime Archive log --	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.qarlog
 
 Archive:	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.qar
-Date:		Fri Sep 20 18:38:45 2024
+Date:		Fri Sep 27 08:33:59 2024
 Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/CONTROLPATH.sv
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.archive.rpt
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.qarlog
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.qpf
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.qsf
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.restore.rpt
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/__FIFO.auto.qarlog
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/assignment_defaults.qdf
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.flow.rpt
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.rpt
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.smsg
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.summary
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv
 C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv
-	======= Total: 17 files to archive =======
+	======= Total: 8 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

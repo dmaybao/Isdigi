@@ -1,0 +1,20 @@
+// para monitorizar las escrituras 
+
+always @(negedge CLK)
+	begin 
+		if (write == 1'b1) 
+			begin 
+				fifo_ideal.push_front(DATA_in);
+			end
+	end
+
+// para monitorizar las lecturas 
+
+always @(negedge CLK)
+	begin 
+		if (write == 1'b1) 
+			begin 
+				fifo_ideal.pop_back();
+				@(negedge CLK) assert (DATA_out==target) else $error("Error de lectura");
+			end
+	end

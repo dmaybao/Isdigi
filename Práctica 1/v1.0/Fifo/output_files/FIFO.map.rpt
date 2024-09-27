@@ -1,5 +1,5 @@
-Analysis & Elaboration report for FIFO
-Fri Sep 20 18:38:44 2024
+Analysis & Synthesis report for FIFO
+Fri Sep 27 08:32:45 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -7,11 +7,21 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |FSM|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |FSM
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,43 +45,27 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Fri Sep 20 18:38:44 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 27 08:32:45 2024       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; FIFO                                        ;
 ; Top-level Entity Name              ; FSM                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 16                                          ;
+;     Dedicated logic registers      ; 3                                           ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 31                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
+; Analysis & Synthesis Settings                                                                                        ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,9 +150,172 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 16       ;
+;                                             ;          ;
+; Total combinational functions               ; 16       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 11       ;
+;     -- 3 input functions                    ; 1        ;
+;     -- <=2 input functions                  ; 4        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 16       ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 3        ;
+;     -- Dedicated logic registers            ; 3        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 31       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; state.s1 ;
+; Maximum fan-out                             ; 6        ;
+; Total fan-out                               ; 101      ;
+; Average fan-out                             ; 1.25     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |FSM                       ; 16 (16)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |FSM                ; FSM         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |FSM|state                           ;
++----------+----------+----------+----------+----------+
+; Name     ; state.s3 ; state.s2 ; state.s1 ; state.s0 ;
++----------+----------+----------+----------+----------+
+; state.s0 ; 0        ; 0        ; 0        ; 0        ;
+; state.s1 ; 0        ; 0        ; 1        ; 1        ;
+; state.s2 ; 0        ; 1        ; 0        ; 1        ;
+; state.s3 ; 1        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; state~4                               ; Lost fanout                            ;
+; state~5                               ; Lost fanout                            ;
+; state.s3                              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FSM|Selector4             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FSM|Selector3             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |FSM ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 31                          ;
+; cycloneiii_ff         ; 3                           ;
+;     CLR               ; 3                           ;
+; cycloneiii_lcell_comb ; 19                          ;
+;     normal            ; 19                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 11                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.23                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Sep 27 08:32:35 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO -c FIFO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file counter.sv
@@ -167,23 +324,49 @@ Info (12021): Found 1 design units, including 1 entities, in source file ram_dp.
     Info (12023): Found entity 1: ram_dp File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shifter_2d_var.sv
     Info (12023): Found entity 1: shifter_2d_var File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv Line: 1
-Error (10170): Verilog HDL syntax error at FSM.sv(54) near text: "=";  expecting "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 54
-Error (10170): Verilog HDL syntax error at FSM.sv(67) near text: "=";  expecting "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 67
-Error (10170): Verilog HDL syntax error at FSM.sv(74) near text: ";";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 74
-Error (10170): Verilog HDL syntax error at FSM.sv(90) near text: ";";  expecting ":", or ",". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 90
-Error (10112): Ignored design unit "FSM" at FSM.sv(17) due to previous errors File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 17
-Info (12021): Found 0 design units, including 0 entities, in source file fsm.sv
-Error (10170): Verilog HDL syntax error at FIFO.sv(15) near text: ".";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv Line: 15
-Error (10170): Verilog HDL syntax error at FIFO.sv(30) near text: ".";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv Line: 30
-Error (10170): Verilog HDL syntax error at FIFO.sv(41) near text: ".";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv Line: 41
-Error (10112): Ignored design unit "FIFO" at FIFO.sv(1) due to previous errors File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file fifo.sv
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.sv
+    Info (12023): Found entity 1: FIFO File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv Line: 1
+Info (12127): Elaborating entity "FSM" for the top level hierarchy
+Warning (10034): Output port "DATA_OUT" at FSM.sv(30) has no driver File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DATA_OUT[0]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[1]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[2]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[3]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[4]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[5]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[6]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+    Warning (13410): Pin "DATA_OUT[7]" is stuck at GND File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 30
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "DATA_IN[0]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[1]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[2]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[3]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[4]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[5]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[6]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+    Warning (15610): No output dependent on input pin "DATA_IN[7]" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv Line: 21
+Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 16 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Fri Sep 27 08:32:45 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.smsg.
 
 

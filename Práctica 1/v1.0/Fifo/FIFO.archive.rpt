@@ -1,5 +1,5 @@
 Archive Project report for FIFO
-Fri Sep 20 18:38:45 2024
+Fri Sep 27 08:33:59 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Sep 20 18:38:45 2024 ;
+; Archive Project Status ; Successful - Fri Sep 27 08:33:59 2024 ;
 ; Revision Name          ; FIFO                                  ;
 ; Top-level Entity Name  ; FSM                                   ;
 ; Family                 ; Cyclone IV E                          ;
@@ -45,19 +45,10 @@ refer to the applicable agreement for further details.
 +--------------------------+
 ; Archive Project Messages ;
 +--------------------------+
-Warning (292006): Can't contact license server "1717@158.42.250.86" -- this server will be ignored.
 Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
-Critical Warning: Analysis & Elaboration was not run successfully.
-    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
-Warning (225010): Analysis was not performed on the current project. The Quartus Prime software may not be able to automatically locate all project files.
-Info: Parsing: counter.sv
-Info: Parsing: ram_dp.sv
-Info: Parsing: shifter_2d_var.sv
-Info: Parsing: FSM.sv
-Info: Parsing: FIFO.sv
 Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/
 Info: ----------------------------------------------------------
@@ -66,36 +57,32 @@ Info: Generated archive 'C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FI
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'FIFO.archive.rpt'
-Error (23031): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
-Error: Quartus Prime Shell was unsuccessful. 12 errors, 7 warnings
-    Error: Peak virtual memory: 4858 megabytes
-    Error: Processing ended: Fri Sep 20 18:38:45 2024
-    Error: Elapsed time: 00:00:19
-    Error: Total CPU time (on all processors): 00:00:24
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Fri Sep 27 08:33:59 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
-+-----------------------------------------------------------------------------------------+
-; Files Archived                                                                          ;
-+-----------------------------------------------------------------------------------------+
-; File Name                                                                               ;
-+-----------------------------------------------------------------------------------------+
-; __FIFO.auto.qarlog                                                                      ;
-; assignment_defaults.qdf                                                                 ;
-; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.flow.rpt    ;
-; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.rpt     ;
-; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.smsg    ;
-; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/output_files/FIFO.map.summary ;
-; CONTROLPATH.sv                                                                          ;
-; counter.sv                                                                              ;
-; FIFO.archive.rpt                                                                        ;
-; FIFO.qarlog                                                                             ;
-; FIFO.qpf                                                                                ;
-; FIFO.qsf                                                                                ;
-; FIFO.restore.rpt                                                                        ;
-; FIFO.sv                                                                                 ;
-; FSM.sv                                                                                  ;
-; ram_dp.sv                                                                               ;
-; shifter_2d_var.sv                                                                       ;
-+-----------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Files Archived                                                              ;
++-----------------------------------------------------------------------------+
+; File Name                                                                   ;
++-----------------------------------------------------------------------------+
+; assignment_defaults.qdf                                                     ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv        ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv           ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv            ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv         ;
+; C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv ;
+; counter.sv                                                                  ;
+; FIFO.qpf                                                                    ;
+; FIFO.qsf                                                                    ;
+; FIFO.sv                                                                     ;
+; FSM.sv                                                                      ;
+; ram_dp.sv                                                                   ;
+; shifter_2d_var.sv                                                           ;
++-----------------------------------------------------------------------------+
 
 

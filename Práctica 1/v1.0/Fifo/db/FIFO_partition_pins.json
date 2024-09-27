@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "F_FULL_N",
+					"strict" : false
+				},
+				{
+					"name" : "F_EMPTY_N",
+					"strict" : false
+				},
+				{
+					"name" : "ENABLE",
+					"strict" : false
+				},
+				{
+					"name" : "UP_DOWN",
+					"strict" : false
+				},
+				{
+					"name" : "WREN",
+					"strict" : false
+				},
+				{
+					"name" : "RDEN",
+					"strict" : false
+				},
+				{
+					"name" : "READ",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "RSTn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

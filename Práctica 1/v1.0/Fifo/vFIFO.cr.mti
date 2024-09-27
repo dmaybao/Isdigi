@@ -1,0 +1,43 @@
+{C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlogsa54c4".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/ram_dp.sv(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlogfvc06q".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO.sv(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlog2izi81".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/counter.sv(19): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlogvzqymk".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/shifter_2d_var.sv(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlogc1mgw2".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FSM.sv(16): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/CONTROLPATH.sv} {0 {vlog -work FIFO -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/CONTROLPATH.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/FIFO/_temp/vlog9m8hik".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.0/FIFO/CONTROLPATH.sv(18): Verilog Compiler exiting
+
+} {} {}}

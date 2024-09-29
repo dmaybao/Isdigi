@@ -1,0 +1,63 @@
+module tb_FIFO;
+
+    // Parámetros
+    parameter mem_depth = 32;
+    parameter size = 8;
+
+    // Señales
+    reg clk;
+    reg rst_n;
+    reg write;
+    reg read;
+    reg [size-1:0] data_in;
+    wire [size-1:0] data_out;
+    wire f_full_n;
+    wire f_empty_n;
+    wire enable;
+    wire up_down;
+    wire wren;
+    wire rden;
+    wire [$clog2(mem_depth)-1:0] count;
+
+    // Instancia del DUT (Device Under Test)
+    FIFO #(mem_depth, size) dut (
+        .DATA_IN(data_in),
+        .READ(read),
+        .WRITE(write),
+        .CLEAR_N(1'b1),
+        .RESET_N(rst_n),
+        .CLOCK(clk),
+        .DATA_OUT(data_out),
+        .F_FULL_N(f_full_n),
+        .F_EMPTY_N(f_empty_n),
+        .USE_DW(count)
+    );
+
+    // Generación de reloj
+    always #5 clk = ~clk;
+
+    // Estímulos
+    initial begin
+        // Inicialización
+        clk = 0;
+        rst_n = 0;
+        write = 0;
+        read = 0;
+        data_in = 0;
+
+        // Reset
+        #10 rst_n = 1;
+
+        // Escribir datos en la FIFO
+        #10 write = 1; data_in = 8'hA5;
+        #10 write = 0;
+
+        // Leer datos de la FIFO
+        #10 read = 1;
+        #10 read = 0;
+
+        // Finalizar simulación
+        #100 $finish;
+    end
+
+endmodule

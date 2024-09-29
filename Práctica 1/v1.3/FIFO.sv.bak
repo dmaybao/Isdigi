@@ -1,0 +1,50 @@
+//-----------------------------------------------------------------------------
+// Universitat Politècnica de València   |  2024-2025
+// Isdigi           3º Estit
+// 
+// Date:     25/9/2024
+// Names:     Daniel Mayoral Baños
+// Module Name:     FIFO
+// Project Name:    FIFO
+// Description:     Módulo principal para la union de Datapath y del ControlPath
+//
+// Dependencies:    Read, Write, Clear_n, Rstn, Clk, [7:0] DATA_IN, 
+//							[7:0] DATA_OUT, [4:0] USE_DW
+//	Parameters: 	  Depth=32, Width=8
+//
+// Revision: v 1.3
+// Additional Comments:
+//-----------------------------------------------------------------------------
+
+
+module FIFO (
+    input [7:0] DATA_IN,
+    input Read, Write, Clear_n, Rstn, Clk,
+    output F_FULL_N, F_EMPTY_N,
+    output [7:0] DATA_OUT,
+    output [4:0] USE_DW
+);
+
+parameter Depth=32, Width=8;
+localparam Address=$clog2(DEPTH-1);
+	
+wire [Address-1:0] Count 
+
+assing USE_DW = Count;
+// ControlPath
+FSM fsm_inst (
+    .F_EMPTY_N(F_EMPTY_N), 
+    .F_FULL_N(F_FULL_N), 
+    .WRITE(Write), 
+    .READ(Read),  
+    .COUNT(Count), 
+    .clk(Clk), 
+    .RSTn(Rstn), 
+    .ENABLE(Enable),
+	.
+
+);
+// DataPath
+
+
+endmodule 

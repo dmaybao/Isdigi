@@ -1,5 +1,5 @@
 Fitter report for FIFO
-Sun Sep 29 18:27:33 2024
+Mon Sep 30 19:15:34 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Sep 29 18:27:33 2024       ;
+; Fitter Status                      ; Successful - Mon Sep 30 19:15:34 2024       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; FIFO                                        ;
 ; Top-level Entity Name              ; FIFO                                        ;
@@ -152,18 +152,18 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
-;     Processor 3            ;   1.0%      ;
-;     Processor 4            ;   1.0%      ;
-;     Processor 5            ;   1.0%      ;
-;     Processor 6            ;   0.9%      ;
-;     Processor 7            ;   0.9%      ;
-;     Processor 8            ;   0.9%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.8%      ;
+;     Processor 4            ;   0.8%      ;
+;     Processor 5            ;   0.8%      ;
+;     Processor 6            ;   0.8%      ;
+;     Processor 7            ;   0.8%      ;
+;     Processor 8            ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -1630,9 +1630,9 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node Clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 22
+Info (176353): Automatically promoted node Clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 21
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node RSTn~input (placed in PIN 24 (CLK2, DIFFCLK_1p)) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 22
+Info (176353): Automatically promoted node RSTn~input (placed in PIN 24 (CLK2, DIFFCLK_1p)) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 21
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1663,17 +1663,17 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/output_files/FIFO.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5832 megabytes
-    Info: Processing ended: Sun Sep 29 18:27:33 2024
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 5830 megabytes
+    Info: Processing ended: Mon Sep 30 19:15:34 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:08
 
 

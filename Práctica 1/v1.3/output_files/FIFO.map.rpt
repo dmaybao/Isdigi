@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FIFO
-Sun Sep 29 18:27:26 2024
+Mon Sep 30 19:15:26 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 29 18:27:26 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 30 19:15:26 2024       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; FIFO                                        ;
 ; Top-level Entity Name              ; FIFO                                        ;
@@ -330,7 +330,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                             ;
 +----------------+-------+----------------------------------+
 ; n              ; 32    ; Signed Integer                   ;
-; size           ; 8     ; Signed Integer                   ;
 +----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -385,20 +384,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Sep 29 18:27:17 2024
+    Info: Processing started: Mon Sep 30 19:15:15 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO -c FIFO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file shifter_2d_var.sv
     Info (12023): Found entity 1: shifter_2d_var File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/shifter_2d_var.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file fifo.sv
-    Info (12023): Found entity 1: FIFO File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 20
+    Info (12023): Found entity 1: FIFO File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
     Info (12023): Found entity 1: FSM File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv Line: 16
 Info (12127): Elaborating entity "FIFO" for the top level hierarchy
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at FSM.sv(53): truncated value with size 32 to match size of target (5) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at FSM.sv(55): truncated value with size 32 to match size of target (5) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv Line: 55
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at FSM.sv(52): truncated value with size 32 to match size of target (5) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at FSM.sv(54): truncated value with size 32 to match size of target (5) File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv Line: 54
 Info (12128): Elaborating entity "shifter_2d_var" for hierarchy "shifter_2d_var:shifter_inst" File: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv Line: 58
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
@@ -411,8 +410,8 @@ Info (21057): Implemented 349 device resources after synthesis - the final resou
     Info (21061): Implemented 321 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Sun Sep 29 18:27:26 2024
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Mon Sep 30 19:15:26 2024
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:24
 
 

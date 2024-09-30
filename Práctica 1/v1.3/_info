@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2023.4 2023.10, Oct  9 2023
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dW:/Isdigi/Prac1/v1.3
+vtb_FIFO
+2W:/Isdigi/Prac1/v1.3/tb_FIFO.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1727711656
+!i10b 1
+!s100 2EOgQTT^jPzTc[nlThYJm0
+I7WzG=PmPbHS6C699BQ55f0
+S1
+R0
+w1727711296
+8W:/Isdigi/Prac1/v1.3/tb_FIFO.sv
+FW:/Isdigi/Prac1/v1.3/tb_FIFO.sv
+!i122 1
+L0 17 63
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2023.4;77
+r1
+!s85 0
+31
+!s108 1727711656.000000
+!s107 W:/Isdigi/Prac1/v1.3/tb_FIFO.sv|
+!s90 -reportprogress|300|-work|Fifo|-vopt|-sv|-stats=none|W:/Isdigi/Prac1/v1.3/tb_FIFO.sv|
+!i113 0
+o-work Fifo -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+ntb_@f@i@f@o

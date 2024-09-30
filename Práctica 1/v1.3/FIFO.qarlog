@@ -1,17 +1,6 @@
-Quartus Prime Archive log --	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.qarlog
 
-Archive:	C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.qar
-Date:		Sun Sep 29 18:28:22 2024
-Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
-	=========== Files Selected: ===========
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.qpf
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.qsf
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FIFO.sv
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/FSM.sv
-C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.3/shifter_2d_var.sv
-c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 6 files to archive =======
-
-	================ Status: ===============
-All files archived successfully.
+******* Archived project restoration attempt on Mon Sep 30 16:53:22 2024
+Source archive file:	W:/Isdigi/Prac1/v1.3/FIFO.qar
+Archive was extracted into	W:/Isdigi/Prac1/v1.3/
+		 - successfully.

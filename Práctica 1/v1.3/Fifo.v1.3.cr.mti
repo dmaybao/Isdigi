@@ -1,0 +1,29 @@
+W:/Isdigi/Prac1/v1.3/FIFO.sv {1 {vlog -work work -vopt -sv -stats=none W:/Isdigi/Prac1/v1.3/FIFO.sv
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+-- Compiling module FIFO
+
+Top level modules:
+	FIFO
+
+} {} {}} W:/Isdigi/Prac1/v1.3/tb_FIFO.sv {1 {vlog -work Fifo -vopt -sv -stats=none W:/Isdigi/Prac1/v1.3/tb_FIFO.sv
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+-- Compiling module tb_FIFO
+
+Top level modules:
+	tb_FIFO
+
+} {} {}} W:/Isdigi/Prac1/v1.3/shifter_2d_var.sv {1 {vlog -work work -vopt -sv -stats=none W:/Isdigi/Prac1/v1.3/shifter_2d_var.sv
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+-- Compiling module shifter_2d_var
+
+Top level modules:
+	shifter_2d_var
+
+} {} {}} W:/Isdigi/Prac1/v1.3/FSM.sv {1 {vlog -work work -vopt -sv -stats=none W:/Isdigi/Prac1/v1.3/FSM.sv
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}}

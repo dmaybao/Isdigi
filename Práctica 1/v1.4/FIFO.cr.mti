@@ -1,0 +1,36 @@
+{C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/shifter_2d_var.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/shifter_2d_var.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_temp/vlog64mjsj".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/shifter_2d_var.sv(19): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FSM.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FSM.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_temp/vlogqn7gjy".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FSM.sv(16): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FIFO.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FIFO.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_temp/vlognq552s".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/FIFO.sv(19): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/tb_FIFO.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/tb_FIFO.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_temp/vlogxbns7a".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/tb_FIFO.sv(17): Verilog Compiler exiting
+
+} {} {}} {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/work/_temp/vlogxsqeim".
+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv(19): Verilog Compiler exiting
+
+} {} {}}

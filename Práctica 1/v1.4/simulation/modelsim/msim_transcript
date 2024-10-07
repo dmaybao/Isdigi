@@ -1,0 +1,28 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do FIFO_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/danmayoral/Documents/Isdigi/Práctica\ 1/v1.4 {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:57:16 on Oct 07,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4" C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv 
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/simulation/modelsim/rtl_work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vlog-9) Problem while writing token file "C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/simulation/modelsim/rtl_work/_temp/vlogg1bbcm".
+# El sistema no puede encontrar la ruta especificada. (GetLastError() = 3)
+# ** Error: C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv(19): Verilog Compiler exiting
+# End time: 10:57:16 on Oct 07,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./FIFO_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/danmayoral/Documents/Isdigi/Práctica\ 1/v1.4 {C:/Users/danmayoral/Documents/Isdigi/Práctica 1/v1.4/count.sv}"

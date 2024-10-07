@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
-// DATE "09/30/2024 19:15:41"
+// DATE "10/07/2024 10:25:43"
 
 // 
 // Device: Altera EP4CE6E22A7 Package TQFP144
@@ -39,16 +39,16 @@ module FIFO (
 	F_EMPTY_N,
 	DATA_OUT,
 	USE_DW);
-input 	logic [7:0] DATA_IN ;
-input 	reg Read ;
-input 	reg Write ;
-input 	reg Clear_n ;
-input 	reg RSTn ;
-input 	reg Clk ;
-output 	reg F_FULL_N ;
-output 	reg F_EMPTY_N ;
-output 	logic [7:0] DATA_OUT ;
-output 	logic [4:0] USE_DW ;
+input 	[7:0] DATA_IN;
+input 	Read;
+input 	Write;
+input 	Clear_n;
+input 	RSTn;
+input 	Clk;
+output 	F_FULL_N;
+output 	F_EMPTY_N;
+output 	[7:0] DATA_OUT;
+output 	[4:0] USE_DW;
 
 // Design Ports Information
 // F_FULL_N	=>  Location: PIN_71,	 I/O Standard: 2.5 V,	 Current Strength: Default

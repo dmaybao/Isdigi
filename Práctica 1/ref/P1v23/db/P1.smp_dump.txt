@@ -1,0 +1,6 @@
+
+State Machine - |FIFO|state
+Name state.vacio state.lleno state.otros 
+state.vacio 0 0 0 
+state.otros 1 0 1 
+state.lleno 1 1 0 

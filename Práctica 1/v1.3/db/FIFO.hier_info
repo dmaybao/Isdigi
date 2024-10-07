@@ -12,21 +12,21 @@ Write => Write.IN1
 Clear_n => Clear_n.IN1
 RSTn => RSTn.IN2
 Clk => Clk.IN2
-F_FULL_N <= FSM:fsm_inst.F_FULL_N
-F_EMPTY_N <= FSM:fsm_inst.F_EMPTY_N
-DATA_OUT[0] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[1] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[2] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[3] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[4] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[5] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[6] <= shifter_2d_var:shifter_inst.salida_serie
-DATA_OUT[7] <= shifter_2d_var:shifter_inst.salida_serie
-USE_DW[0] <= Count[0].DB_MAX_OUTPUT_PORT_TYPE
-USE_DW[1] <= Count[1].DB_MAX_OUTPUT_PORT_TYPE
-USE_DW[2] <= Count[2].DB_MAX_OUTPUT_PORT_TYPE
-USE_DW[3] <= Count[3].DB_MAX_OUTPUT_PORT_TYPE
-USE_DW[4] <= Count[4].DB_MAX_OUTPUT_PORT_TYPE
+F_FULL_N << FSM:fsm_inst.F_FULL_N
+F_EMPTY_N << FSM:fsm_inst.F_EMPTY_N
+DATA_OUT[0] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[1] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[2] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[3] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[4] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[5] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[6] << shifter_2d_var:shifter_inst.salida_serie
+DATA_OUT[7] << shifter_2d_var:shifter_inst.salida_serie
+USE_DW[0] << Count[0].DB_MAX_OUTPUT_PORT_TYPE
+USE_DW[1] << Count[1].DB_MAX_OUTPUT_PORT_TYPE
+USE_DW[2] << Count[2].DB_MAX_OUTPUT_PORT_TYPE
+USE_DW[3] << Count[3].DB_MAX_OUTPUT_PORT_TYPE
+USE_DW[4] << Count[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FIFO|FSM:fsm_inst

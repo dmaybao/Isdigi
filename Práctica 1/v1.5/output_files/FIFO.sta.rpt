@@ -1,0 +1,1279 @@
+TimeQuest Timing Analyzer report for FIFO
+Mon Oct 07 11:48:22 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'Clk'
+ 13. Slow 1200mV 85C Model Hold: 'Clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'Clk'
+ 22. Slow 1200mV 0C Model Hold: 'Clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'Clk'
+ 30. Fast 1200mV 0C Model Hold: 'Clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; FIFO                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processors 3-8         ;   0.6%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 419.82 MHz ; 250.0 MHz       ; Clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; Clk   ; -1.382 ; -313.306           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clk   ; 0.404 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; Clk   ; -3.000 ; -334.530                         ;
++-------+--------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Clk'                                                                                                            ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.382 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][3] ; Clk          ; Clk         ; 1.000        ; -0.083     ; 2.297      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][7] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][4] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][4] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.359 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][4] ; Clk          ; Clk         ; 1.000        ; -0.093     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[4][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[5][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[6][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][7] ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.358 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][4] ; Clk          ; Clk         ; 1.000        ; -0.092     ; 2.264      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][4]  ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.303 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[31][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.216      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][6]  ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][3] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][3] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.230      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.299 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][0] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.213      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.298 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][6] ; Clk          ; Clk         ; 1.000        ; -0.067     ; 2.229      ;
+; -1.296 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 1.000        ; -0.086     ; 2.208      ;
+; -1.296 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 1.000        ; -0.086     ; 2.208      ;
+; -1.296 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][7] ; Clk          ; Clk         ; 1.000        ; -0.086     ; 2.208      ;
+; -1.296 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][7] ; Clk          ; Clk         ; 1.000        ; -0.086     ; 2.208      ;
+; -1.296 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][7] ; Clk          ; Clk         ; 1.000        ; -0.086     ; 2.208      ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Clk'                                                                                                                             ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.404 ; FSM:fsm_inst|state.s0                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.404 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s1                  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.429 ; shifter_2d_var:shifter_inst|aux[5][0]  ; shifter_2d_var:shifter_inst|aux[4][0]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.694      ;
+; 0.430 ; shifter_2d_var:shifter_inst|aux[13][2] ; shifter_2d_var:shifter_inst|aux[12][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.695      ;
+; 0.442 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.707      ;
+; 0.539 ; shifter_2d_var:shifter_inst|aux[31][5] ; shifter_2d_var:shifter_inst|aux[30][5] ; Clk          ; Clk         ; 0.000        ; 0.096      ; 0.821      ;
+; 0.553 ; shifter_2d_var:shifter_inst|aux[2][6]  ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[9][6]  ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.820      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[19][6] ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[24][5] ; shifter_2d_var:shifter_inst|aux[23][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[21][4] ; shifter_2d_var:shifter_inst|aux[20][4] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[17][3] ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[20][3] ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[5][2]  ; shifter_2d_var:shifter_inst|aux[4][2]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[6][2]  ; shifter_2d_var:shifter_inst|aux[5][2]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[10][2] ; shifter_2d_var:shifter_inst|aux[9][2]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[18][2] ; shifter_2d_var:shifter_inst|aux[17][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[23][2] ; shifter_2d_var:shifter_inst|aux[22][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[25][2] ; shifter_2d_var:shifter_inst|aux[24][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[4][1]  ; shifter_2d_var:shifter_inst|aux[3][1]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[6][1]  ; shifter_2d_var:shifter_inst|aux[5][1]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.554 ; shifter_2d_var:shifter_inst|aux[22][1] ; shifter_2d_var:shifter_inst|aux[21][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.819      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[12][7] ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[23][7] ; shifter_2d_var:shifter_inst|aux[22][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[10][6] ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.821      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[16][6] ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.821      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[24][6] ; shifter_2d_var:shifter_inst|aux[23][6] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[26][6] ; shifter_2d_var:shifter_inst|aux[25][6] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[12][5] ; shifter_2d_var:shifter_inst|aux[11][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[14][5] ; shifter_2d_var:shifter_inst|aux[13][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[26][5] ; shifter_2d_var:shifter_inst|aux[25][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[28][5] ; shifter_2d_var:shifter_inst|aux[27][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[14][4] ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[28][4] ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[7][3]  ; shifter_2d_var:shifter_inst|aux[6][3]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[8][3]  ; shifter_2d_var:shifter_inst|aux[7][3]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[24][3] ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[27][3] ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[2][2]  ; shifter_2d_var:shifter_inst|aux[1][2]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[4][2]  ; shifter_2d_var:shifter_inst|aux[3][2]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[16][2] ; shifter_2d_var:shifter_inst|aux[15][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[18][1] ; shifter_2d_var:shifter_inst|aux[17][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[25][1] ; shifter_2d_var:shifter_inst|aux[24][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[26][1] ; shifter_2d_var:shifter_inst|aux[25][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.820      ;
+; 0.555 ; shifter_2d_var:shifter_inst|aux[23][0] ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.819      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[10][7] ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[18][7] ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[20][7] ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[21][7] ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[27][7] ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[3][6]  ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.822      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[7][6]  ; shifter_2d_var:shifter_inst|aux[6][6]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[28][6] ; shifter_2d_var:shifter_inst|aux[27][6] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[16][5] ; shifter_2d_var:shifter_inst|aux[15][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[17][5] ; shifter_2d_var:shifter_inst|aux[16][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[18][5] ; shifter_2d_var:shifter_inst|aux[17][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[13][4] ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[22][4] ; shifter_2d_var:shifter_inst|aux[21][4] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[12][2] ; shifter_2d_var:shifter_inst|aux[11][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[20][1] ; shifter_2d_var:shifter_inst|aux[19][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[4][0]  ; shifter_2d_var:shifter_inst|aux[3][0]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.821      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[11][0] ; shifter_2d_var:shifter_inst|aux[10][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[12][0] ; shifter_2d_var:shifter_inst|aux[11][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.556 ; shifter_2d_var:shifter_inst|aux[27][0] ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.820      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[19][7] ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[26][7] ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[31][7] ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[22][6] ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[15][5] ; shifter_2d_var:shifter_inst|aux[14][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[29][5] ; shifter_2d_var:shifter_inst|aux[28][5] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[15][4] ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[29][4] ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[21][3] ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[19][1] ; shifter_2d_var:shifter_inst|aux[18][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[6][0]  ; shifter_2d_var:shifter_inst|aux[5][0]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.822      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[29][0] ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[30][0] ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.821      ;
+; 0.558 ; shifter_2d_var:shifter_inst|aux[2][7]  ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.822      ;
+; 0.558 ; shifter_2d_var:shifter_inst|aux[20][2] ; shifter_2d_var:shifter_inst|aux[19][2] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.823      ;
+; 0.558 ; shifter_2d_var:shifter_inst|aux[15][0] ; shifter_2d_var:shifter_inst|aux[14][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.822      ;
+; 0.558 ; shifter_2d_var:shifter_inst|aux[28][0] ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.822      ;
+; 0.588 ; shifter_2d_var:shifter_inst|aux[8][6]  ; shifter_2d_var:shifter_inst|aux[7][6]  ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.854      ;
+; 0.588 ; shifter_2d_var:shifter_inst|aux[28][1] ; shifter_2d_var:shifter_inst|aux[27][1] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.853      ;
+; 0.596 ; shifter_2d_var:shifter_inst|aux[17][4] ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.861      ;
+; 0.596 ; shifter_2d_var:shifter_inst|aux[30][1] ; shifter_2d_var:shifter_inst|aux[29][1] ; Clk          ; Clk         ; 0.000        ; 0.097      ; 0.879      ;
+; 0.600 ; shifter_2d_var:shifter_inst|aux[9][0]  ; shifter_2d_var:shifter_inst|aux[8][0]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.864      ;
+; 0.602 ; shifter_2d_var:shifter_inst|aux[15][1] ; shifter_2d_var:shifter_inst|aux[14][1] ; Clk          ; Clk         ; 0.000        ; 0.072      ; 0.860      ;
+; 0.602 ; shifter_2d_var:shifter_inst|aux[20][0] ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 0.000        ; 0.077      ; 0.865      ;
+; 0.604 ; shifter_2d_var:shifter_inst|aux[30][3] ; shifter_2d_var:shifter_inst|aux[29][3] ; Clk          ; Clk         ; 0.000        ; 0.095      ; 0.885      ;
+; 0.612 ; shifter_2d_var:shifter_inst|aux[17][6] ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.878      ;
+; 0.612 ; shifter_2d_var:shifter_inst|aux[19][5] ; shifter_2d_var:shifter_inst|aux[18][5] ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.878      ;
+; 0.612 ; shifter_2d_var:shifter_inst|aux[16][3] ; shifter_2d_var:shifter_inst|aux[15][3] ; Clk          ; Clk         ; 0.000        ; 0.080      ; 0.878      ;
+; 0.616 ; shifter_2d_var:shifter_inst|aux[4][4]  ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 0.000        ; 0.079      ; 0.881      ;
+; 0.621 ; shifter_2d_var:shifter_inst|aux[30][2] ; shifter_2d_var:shifter_inst|aux[29][2] ; Clk          ; Clk         ; 0.000        ; 0.096      ; 0.903      ;
+; 0.621 ; shifter_2d_var:shifter_inst|aux[10][0] ; shifter_2d_var:shifter_inst|aux[9][0]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.885      ;
+; 0.622 ; shifter_2d_var:shifter_inst|aux[29][2] ; shifter_2d_var:shifter_inst|aux[28][2] ; Clk          ; Clk         ; 0.000        ; 0.096      ; 0.904      ;
+; 0.623 ; shifter_2d_var:shifter_inst|aux[7][4]  ; shifter_2d_var:shifter_inst|aux[6][4]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.887      ;
+; 0.623 ; shifter_2d_var:shifter_inst|aux[31][1] ; shifter_2d_var:shifter_inst|aux[30][1] ; Clk          ; Clk         ; 0.000        ; 0.096      ; 0.905      ;
+; 0.623 ; shifter_2d_var:shifter_inst|aux[19][0] ; shifter_2d_var:shifter_inst|aux[18][0] ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.887      ;
+; 0.624 ; shifter_2d_var:shifter_inst|aux[1][3]  ; shifter_2d_var:shifter_inst|aux[0][3]  ; Clk          ; Clk         ; 0.000        ; 0.078      ; 0.888      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 452.08 MHz ; 250.0 MHz       ; Clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; Clk   ; -1.212 ; -262.543          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clk   ; 0.356 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; Clk   ; -3.000 ; -334.530                        ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Clk'                                                                                                             ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.212 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][3] ; Clk          ; Clk         ; 1.000        ; -0.074     ; 2.137      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][7] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.142 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][4] ; Clk          ; Clk         ; 1.000        ; -0.085     ; 2.056      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[4][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[5][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[6][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][7] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.138 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][4] ; Clk          ; Clk         ; 1.000        ; -0.084     ; 2.053      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][4]  ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.092 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[31][7] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.013      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][6]  ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][6] ; Clk          ; Clk         ; 1.000        ; -0.059     ; 2.024      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][3] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][3] ; Clk          ; Clk         ; 1.000        ; -0.058     ; 2.025      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.084 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][0] ; Clk          ; Clk         ; 1.000        ; -0.078     ; 2.005      ;
+; -1.083 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 1.000        ; -0.079     ; 2.003      ;
+; -1.083 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 1.000        ; -0.079     ; 2.003      ;
+; -1.083 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][7] ; Clk          ; Clk         ; 1.000        ; -0.079     ; 2.003      ;
+; -1.083 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][7] ; Clk          ; Clk         ; 1.000        ; -0.079     ; 2.003      ;
+; -1.083 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][7] ; Clk          ; Clk         ; 1.000        ; -0.079     ; 2.003      ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Clk'                                                                                                                              ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.356 ; FSM:fsm_inst|state.s0                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s1                  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.597      ;
+; 0.396 ; shifter_2d_var:shifter_inst|aux[13][2] ; shifter_2d_var:shifter_inst|aux[12][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.638      ;
+; 0.397 ; shifter_2d_var:shifter_inst|aux[5][0]  ; shifter_2d_var:shifter_inst|aux[4][0]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.638      ;
+; 0.400 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.641      ;
+; 0.493 ; shifter_2d_var:shifter_inst|aux[31][5] ; shifter_2d_var:shifter_inst|aux[30][5] ; Clk          ; Clk         ; 0.000        ; 0.087      ; 0.751      ;
+; 0.507 ; shifter_2d_var:shifter_inst|aux[2][6]  ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.749      ;
+; 0.507 ; shifter_2d_var:shifter_inst|aux[25][2] ; shifter_2d_var:shifter_inst|aux[24][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.749      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[23][7] ; shifter_2d_var:shifter_inst|aux[22][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.749      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[9][6]  ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[19][6] ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[24][6] ; shifter_2d_var:shifter_inst|aux[23][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[24][5] ; shifter_2d_var:shifter_inst|aux[23][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[7][3]  ; shifter_2d_var:shifter_inst|aux[6][3]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[10][2] ; shifter_2d_var:shifter_inst|aux[9][2]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[16][2] ; shifter_2d_var:shifter_inst|aux[15][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[18][2] ; shifter_2d_var:shifter_inst|aux[17][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.508 ; shifter_2d_var:shifter_inst|aux[23][2] ; shifter_2d_var:shifter_inst|aux[22][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[10][7] ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[12][7] ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[21][7] ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[10][6] ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[16][6] ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[26][6] ; shifter_2d_var:shifter_inst|aux[25][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[28][6] ; shifter_2d_var:shifter_inst|aux[27][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[12][5] ; shifter_2d_var:shifter_inst|aux[11][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[14][5] ; shifter_2d_var:shifter_inst|aux[13][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[17][5] ; shifter_2d_var:shifter_inst|aux[16][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[26][5] ; shifter_2d_var:shifter_inst|aux[25][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[28][5] ; shifter_2d_var:shifter_inst|aux[27][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[21][4] ; shifter_2d_var:shifter_inst|aux[20][4] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[28][4] ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[8][3]  ; shifter_2d_var:shifter_inst|aux[7][3]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[17][3] ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[20][3] ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[5][2]  ; shifter_2d_var:shifter_inst|aux[4][2]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[6][2]  ; shifter_2d_var:shifter_inst|aux[5][2]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[12][2] ; shifter_2d_var:shifter_inst|aux[11][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.751      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[4][1]  ; shifter_2d_var:shifter_inst|aux[3][1]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[6][1]  ; shifter_2d_var:shifter_inst|aux[5][1]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[22][1] ; shifter_2d_var:shifter_inst|aux[21][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[12][0] ; shifter_2d_var:shifter_inst|aux[11][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.509 ; shifter_2d_var:shifter_inst|aux[23][0] ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.750      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[18][7] ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[20][7] ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[3][6]  ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[7][6]  ; shifter_2d_var:shifter_inst|aux[6][6]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[22][6] ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[15][5] ; shifter_2d_var:shifter_inst|aux[14][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[16][5] ; shifter_2d_var:shifter_inst|aux[15][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[18][5] ; shifter_2d_var:shifter_inst|aux[17][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[29][5] ; shifter_2d_var:shifter_inst|aux[28][5] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.752      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[13][4] ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 0.000        ; 0.069      ; 0.750      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[14][4] ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 0.000        ; 0.069      ; 0.750      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[24][3] ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[27][3] ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[2][2]  ; shifter_2d_var:shifter_inst|aux[1][2]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[4][2]  ; shifter_2d_var:shifter_inst|aux[3][2]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[18][1] ; shifter_2d_var:shifter_inst|aux[17][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[25][1] ; shifter_2d_var:shifter_inst|aux[24][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[26][1] ; shifter_2d_var:shifter_inst|aux[25][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[4][0]  ; shifter_2d_var:shifter_inst|aux[3][0]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[11][0] ; shifter_2d_var:shifter_inst|aux[10][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[27][0] ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.510 ; shifter_2d_var:shifter_inst|aux[30][0] ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.751      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[19][7] ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[27][7] ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[22][4] ; shifter_2d_var:shifter_inst|aux[21][4] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[29][4] ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[19][1] ; shifter_2d_var:shifter_inst|aux[18][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[20][1] ; shifter_2d_var:shifter_inst|aux[19][1] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[6][0]  ; shifter_2d_var:shifter_inst|aux[5][0]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[15][0] ; shifter_2d_var:shifter_inst|aux[14][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[28][0] ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.511 ; shifter_2d_var:shifter_inst|aux[29][0] ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.752      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[2][7]  ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.753      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[26][7] ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.753      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[31][7] ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 0.000        ; 0.069      ; 0.752      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[15][4] ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 0.000        ; 0.069      ; 0.752      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[21][3] ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.753      ;
+; 0.512 ; shifter_2d_var:shifter_inst|aux[20][2] ; shifter_2d_var:shifter_inst|aux[19][2] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.754      ;
+; 0.540 ; shifter_2d_var:shifter_inst|aux[28][1] ; shifter_2d_var:shifter_inst|aux[27][1] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.782      ;
+; 0.544 ; shifter_2d_var:shifter_inst|aux[8][6]  ; shifter_2d_var:shifter_inst|aux[7][6]  ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.786      ;
+; 0.544 ; shifter_2d_var:shifter_inst|aux[17][4] ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.785      ;
+; 0.546 ; shifter_2d_var:shifter_inst|aux[30][1] ; shifter_2d_var:shifter_inst|aux[29][1] ; Clk          ; Clk         ; 0.000        ; 0.087      ; 0.804      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[30][3] ; shifter_2d_var:shifter_inst|aux[29][3] ; Clk          ; Clk         ; 0.000        ; 0.085      ; 0.813      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[15][1] ; shifter_2d_var:shifter_inst|aux[14][1] ; Clk          ; Clk         ; 0.000        ; 0.063      ; 0.791      ;
+; 0.557 ; shifter_2d_var:shifter_inst|aux[9][0]  ; shifter_2d_var:shifter_inst|aux[8][0]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.798      ;
+; 0.558 ; shifter_2d_var:shifter_inst|aux[20][0] ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 0.000        ; 0.069      ; 0.798      ;
+; 0.560 ; shifter_2d_var:shifter_inst|aux[17][6] ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 0.000        ; 0.072      ; 0.803      ;
+; 0.560 ; shifter_2d_var:shifter_inst|aux[19][5] ; shifter_2d_var:shifter_inst|aux[18][5] ; Clk          ; Clk         ; 0.000        ; 0.072      ; 0.803      ;
+; 0.561 ; shifter_2d_var:shifter_inst|aux[16][3] ; shifter_2d_var:shifter_inst|aux[15][3] ; Clk          ; Clk         ; 0.000        ; 0.071      ; 0.803      ;
+; 0.565 ; shifter_2d_var:shifter_inst|aux[4][4]  ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.806      ;
+; 0.568 ; shifter_2d_var:shifter_inst|aux[30][2] ; shifter_2d_var:shifter_inst|aux[29][2] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.825      ;
+; 0.569 ; shifter_2d_var:shifter_inst|aux[31][1] ; shifter_2d_var:shifter_inst|aux[30][1] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.826      ;
+; 0.570 ; shifter_2d_var:shifter_inst|aux[31][3] ; shifter_2d_var:shifter_inst|aux[30][3] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.827      ;
+; 0.570 ; shifter_2d_var:shifter_inst|aux[29][2] ; shifter_2d_var:shifter_inst|aux[28][2] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.827      ;
+; 0.572 ; shifter_2d_var:shifter_inst|aux[31][2] ; shifter_2d_var:shifter_inst|aux[30][2] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.829      ;
+; 0.572 ; shifter_2d_var:shifter_inst|aux[10][0] ; shifter_2d_var:shifter_inst|aux[9][0]  ; Clk          ; Clk         ; 0.000        ; 0.070      ; 0.813      ;
+; 0.573 ; shifter_2d_var:shifter_inst|aux[31][4] ; shifter_2d_var:shifter_inst|aux[30][4] ; Clk          ; Clk         ; 0.000        ; 0.086      ; 0.830      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; Clk   ; -0.193 ; -30.248           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clk   ; 0.183 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; Clk   ; -3.000 ; -277.287                        ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Clk'                                                                                                             ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][7] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][4] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][4] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.193 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][4] ; Clk          ; Clk         ; 1.000        ; -0.054     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[4][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[5][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[6][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][7] ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.192 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][4] ; Clk          ; Clk         ; 1.000        ; -0.053     ; 1.126      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.190 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][3] ; Clk          ; Clk         ; 1.000        ; -0.042     ; 1.135      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[7][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[24][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[30][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.154 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[31][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.095      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[27][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[28][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[29][7] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[4][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[5][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[6][4]  ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[22][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[23][4] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.152 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][0] ; Clk          ; Clk         ; 1.000        ; -0.046     ; 1.093      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[3][6]  ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[10][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[11][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[12][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[13][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[14][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[17][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[19][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[20][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
+; -0.150 ; FSM:fsm_inst|state.s1 ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 1.000        ; -0.028     ; 1.109      ;
++--------+-----------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Clk'                                                                                                                              ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.183 ; FSM:fsm_inst|state.s0                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.183 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s1                  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.189 ; shifter_2d_var:shifter_inst|aux[13][2] ; shifter_2d_var:shifter_inst|aux[12][2] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.313      ;
+; 0.189 ; shifter_2d_var:shifter_inst|aux[5][0]  ; shifter_2d_var:shifter_inst|aux[4][0]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.313      ;
+; 0.205 ; FSM:fsm_inst|state.s1                  ; FSM:fsm_inst|state.s0                  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.329      ;
+; 0.242 ; shifter_2d_var:shifter_inst|aux[31][5] ; shifter_2d_var:shifter_inst|aux[30][5] ; Clk          ; Clk         ; 0.000        ; 0.048      ; 0.374      ;
+; 0.247 ; shifter_2d_var:shifter_inst|aux[2][6]  ; shifter_2d_var:shifter_inst|aux[1][6]  ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.372      ;
+; 0.248 ; shifter_2d_var:shifter_inst|aux[23][7] ; shifter_2d_var:shifter_inst|aux[22][7] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.372      ;
+; 0.248 ; shifter_2d_var:shifter_inst|aux[9][6]  ; shifter_2d_var:shifter_inst|aux[8][6]  ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[10][6] ; shifter_2d_var:shifter_inst|aux[9][6]  ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.374      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[19][6] ; shifter_2d_var:shifter_inst|aux[18][6] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[26][6] ; shifter_2d_var:shifter_inst|aux[25][6] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[12][5] ; shifter_2d_var:shifter_inst|aux[11][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[24][5] ; shifter_2d_var:shifter_inst|aux[23][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[26][5] ; shifter_2d_var:shifter_inst|aux[25][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[7][3]  ; shifter_2d_var:shifter_inst|aux[6][3]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[17][3] ; shifter_2d_var:shifter_inst|aux[16][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[20][3] ; shifter_2d_var:shifter_inst|aux[19][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[5][2]  ; shifter_2d_var:shifter_inst|aux[4][2]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[6][2]  ; shifter_2d_var:shifter_inst|aux[5][2]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[10][2] ; shifter_2d_var:shifter_inst|aux[9][2]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[6][1]  ; shifter_2d_var:shifter_inst|aux[5][1]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[26][1] ; shifter_2d_var:shifter_inst|aux[25][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[12][0] ; shifter_2d_var:shifter_inst|aux[11][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.249 ; shifter_2d_var:shifter_inst|aux[23][0] ; shifter_2d_var:shifter_inst|aux[22][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[10][7] ; shifter_2d_var:shifter_inst|aux[9][7]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[12][7] ; shifter_2d_var:shifter_inst|aux[11][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[20][7] ; shifter_2d_var:shifter_inst|aux[19][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[21][7] ; shifter_2d_var:shifter_inst|aux[20][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[3][6]  ; shifter_2d_var:shifter_inst|aux[2][6]  ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.375      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[16][6] ; shifter_2d_var:shifter_inst|aux[15][6] ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.375      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[24][6] ; shifter_2d_var:shifter_inst|aux[23][6] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[14][5] ; shifter_2d_var:shifter_inst|aux[13][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[17][5] ; shifter_2d_var:shifter_inst|aux[16][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[28][5] ; shifter_2d_var:shifter_inst|aux[27][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[13][4] ; shifter_2d_var:shifter_inst|aux[12][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[21][4] ; shifter_2d_var:shifter_inst|aux[20][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[28][4] ; shifter_2d_var:shifter_inst|aux[27][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[8][3]  ; shifter_2d_var:shifter_inst|aux[7][3]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[24][3] ; shifter_2d_var:shifter_inst|aux[23][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[27][3] ; shifter_2d_var:shifter_inst|aux[26][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[2][2]  ; shifter_2d_var:shifter_inst|aux[1][2]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[4][2]  ; shifter_2d_var:shifter_inst|aux[3][2]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[16][2] ; shifter_2d_var:shifter_inst|aux[15][2] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[18][2] ; shifter_2d_var:shifter_inst|aux[17][2] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[23][2] ; shifter_2d_var:shifter_inst|aux[22][2] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[25][2] ; shifter_2d_var:shifter_inst|aux[24][2] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.373      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[4][1]  ; shifter_2d_var:shifter_inst|aux[3][1]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[18][1] ; shifter_2d_var:shifter_inst|aux[17][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[22][1] ; shifter_2d_var:shifter_inst|aux[21][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[25][1] ; shifter_2d_var:shifter_inst|aux[24][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[11][0] ; shifter_2d_var:shifter_inst|aux[10][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[27][0] ; shifter_2d_var:shifter_inst|aux[26][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.250 ; shifter_2d_var:shifter_inst|aux[30][0] ; shifter_2d_var:shifter_inst|aux[29][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.374      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[18][7] ; shifter_2d_var:shifter_inst|aux[17][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.374      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[7][6]  ; shifter_2d_var:shifter_inst|aux[6][6]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[22][6] ; shifter_2d_var:shifter_inst|aux[21][6] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[28][6] ; shifter_2d_var:shifter_inst|aux[27][6] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[15][5] ; shifter_2d_var:shifter_inst|aux[14][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[16][5] ; shifter_2d_var:shifter_inst|aux[15][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[18][5] ; shifter_2d_var:shifter_inst|aux[17][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[29][5] ; shifter_2d_var:shifter_inst|aux[28][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[14][4] ; shifter_2d_var:shifter_inst|aux[13][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.374      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[12][2] ; shifter_2d_var:shifter_inst|aux[11][2] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[19][1] ; shifter_2d_var:shifter_inst|aux[18][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[20][1] ; shifter_2d_var:shifter_inst|aux[19][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[4][0]  ; shifter_2d_var:shifter_inst|aux[3][0]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[6][0]  ; shifter_2d_var:shifter_inst|aux[5][0]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[15][0] ; shifter_2d_var:shifter_inst|aux[14][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[28][0] ; shifter_2d_var:shifter_inst|aux[27][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.251 ; shifter_2d_var:shifter_inst|aux[29][0] ; shifter_2d_var:shifter_inst|aux[28][0] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[19][7] ; shifter_2d_var:shifter_inst|aux[18][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[27][7] ; shifter_2d_var:shifter_inst|aux[26][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[31][7] ; shifter_2d_var:shifter_inst|aux[30][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[15][4] ; shifter_2d_var:shifter_inst|aux[14][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[22][4] ; shifter_2d_var:shifter_inst|aux[21][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[29][4] ; shifter_2d_var:shifter_inst|aux[28][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.375      ;
+; 0.252 ; shifter_2d_var:shifter_inst|aux[21][3] ; shifter_2d_var:shifter_inst|aux[20][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.376      ;
+; 0.253 ; shifter_2d_var:shifter_inst|aux[2][7]  ; shifter_2d_var:shifter_inst|aux[1][7]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.376      ;
+; 0.253 ; shifter_2d_var:shifter_inst|aux[26][7] ; shifter_2d_var:shifter_inst|aux[25][7] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.376      ;
+; 0.254 ; shifter_2d_var:shifter_inst|aux[20][2] ; shifter_2d_var:shifter_inst|aux[19][2] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.377      ;
+; 0.255 ; shifter_2d_var:shifter_inst|aux[28][1] ; shifter_2d_var:shifter_inst|aux[27][1] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.379      ;
+; 0.256 ; shifter_2d_var:shifter_inst|aux[8][6]  ; shifter_2d_var:shifter_inst|aux[7][6]  ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.381      ;
+; 0.256 ; shifter_2d_var:shifter_inst|aux[30][1] ; shifter_2d_var:shifter_inst|aux[29][1] ; Clk          ; Clk         ; 0.000        ; 0.048      ; 0.388      ;
+; 0.259 ; shifter_2d_var:shifter_inst|aux[17][4] ; shifter_2d_var:shifter_inst|aux[16][4] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.382      ;
+; 0.259 ; shifter_2d_var:shifter_inst|aux[30][3] ; shifter_2d_var:shifter_inst|aux[29][3] ; Clk          ; Clk         ; 0.000        ; 0.048      ; 0.391      ;
+; 0.262 ; shifter_2d_var:shifter_inst|aux[17][6] ; shifter_2d_var:shifter_inst|aux[16][6] ; Clk          ; Clk         ; 0.000        ; 0.041      ; 0.387      ;
+; 0.262 ; shifter_2d_var:shifter_inst|aux[9][0]  ; shifter_2d_var:shifter_inst|aux[8][0]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.385      ;
+; 0.262 ; shifter_2d_var:shifter_inst|aux[20][0] ; shifter_2d_var:shifter_inst|aux[19][0] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.385      ;
+; 0.263 ; shifter_2d_var:shifter_inst|aux[19][5] ; shifter_2d_var:shifter_inst|aux[18][5] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.387      ;
+; 0.264 ; shifter_2d_var:shifter_inst|aux[16][3] ; shifter_2d_var:shifter_inst|aux[15][3] ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.388      ;
+; 0.266 ; shifter_2d_var:shifter_inst|aux[4][4]  ; shifter_2d_var:shifter_inst|aux[3][4]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.389      ;
+; 0.268 ; shifter_2d_var:shifter_inst|aux[1][3]  ; shifter_2d_var:shifter_inst|aux[0][3]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.392      ;
+; 0.268 ; shifter_2d_var:shifter_inst|aux[15][1] ; shifter_2d_var:shifter_inst|aux[14][1] ; Clk          ; Clk         ; 0.000        ; 0.032      ; 0.384      ;
+; 0.268 ; shifter_2d_var:shifter_inst|aux[10][0] ; shifter_2d_var:shifter_inst|aux[9][0]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.391      ;
+; 0.269 ; shifter_2d_var:shifter_inst|aux[3][5]  ; shifter_2d_var:shifter_inst|aux[2][5]  ; Clk          ; Clk         ; 0.000        ; 0.040      ; 0.393      ;
+; 0.269 ; shifter_2d_var:shifter_inst|aux[7][4]  ; shifter_2d_var:shifter_inst|aux[6][4]  ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.392      ;
+; 0.269 ; shifter_2d_var:shifter_inst|aux[19][0] ; shifter_2d_var:shifter_inst|aux[18][0] ; Clk          ; Clk         ; 0.000        ; 0.039      ; 0.392      ;
+; 0.282 ; shifter_2d_var:shifter_inst|aux[30][2] ; shifter_2d_var:shifter_inst|aux[29][2] ; Clk          ; Clk         ; 0.000        ; 0.048      ; 0.414      ;
+; 0.283 ; shifter_2d_var:shifter_inst|aux[29][2] ; shifter_2d_var:shifter_inst|aux[28][2] ; Clk          ; Clk         ; 0.000        ; 0.048      ; 0.415      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.382   ; 0.183 ; N/A      ; N/A     ; -3.000              ;
+;  Clk             ; -1.382   ; 0.183 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -313.306 ; 0.0   ; 0.0      ; 0.0     ; -334.53             ;
+;  Clk             ; -313.306 ; 0.000 ; N/A      ; N/A     ; -334.530            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; F_FULL_N      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; F_EMPTY_N     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; DATA_OUT[7]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; USE_DW[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; USE_DW[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; USE_DW[2]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; USE_DW[3]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; USE_DW[4]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Write                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Read                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RSTn                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[0]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clear_n                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[1]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[2]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[3]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[4]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[5]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[6]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; DATA_IN[7]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; F_FULL_N      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; F_EMPTY_N     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; USE_DW[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; USE_DW[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; F_FULL_N      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; F_EMPTY_N     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; F_FULL_N      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; F_EMPTY_N     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; DATA_OUT[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; DATA_OUT[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; USE_DW[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; USE_DW[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; USE_DW[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clk        ; Clk      ; 523      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clk        ; Clk      ; 523      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 1046  ; 1046 ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; Clk    ; Clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Clear_n    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RSTn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Read       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Write      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; DATA_OUT[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F_EMPTY_N   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F_FULL_N    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Clear_n    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_IN[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RSTn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Read       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Write      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; DATA_OUT[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DATA_OUT[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F_EMPTY_N   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; F_FULL_N    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Oct 07 11:48:20 2024
+Info: Command: quartus_sta FIFO -c FIFO
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'FIFO.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Clk Clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.382
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.382            -313.306 Clk 
+Info (332146): Worst-case hold slack is 0.404
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.404               0.000 Clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -334.530 Clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.212
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.212            -262.543 Clk 
+Info (332146): Worst-case hold slack is 0.356
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.356               0.000 Clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -334.530 Clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.193
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.193             -30.248 Clk 
+Info (332146): Worst-case hold slack is 0.183
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.183               0.000 Clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -277.287 Clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Mon Oct 07 11:48:22 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FIFO
-Mon Sep 30 19:15:26 2024
+Mon Oct 07 10:25:27 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 30 19:15:26 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 07 10:25:27 2024       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; FIFO                                        ;
 ; Top-level Entity Name              ; FIFO                                        ;
@@ -384,7 +384,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Sep 30 19:15:15 2024
+    Info: Processing started: Mon Oct 07 10:25:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FIFO -c FIFO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -408,11 +408,11 @@ Info (21057): Implemented 349 device resources after synthesis - the final resou
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 321 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Mon Sep 30 19:15:26 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Mon Oct 07 10:25:27 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

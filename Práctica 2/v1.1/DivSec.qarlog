@@ -1,0 +1,16 @@
+Quartus Prime Archive log --	C:/Users/danmayoral/Desktop/v1.1/DivSec.qarlog
+
+Archive:	C:/Users/danmayoral/Desktop/v1.1/DivSec.qar
+Date:		Fri Oct 11 09:46:22 2024
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/danmayoral/Desktop/v1.1/DivSec.qpf
+C:/Users/danmayoral/Desktop/v1.1/DivSec.qsf
+C:/Users/danmayoral/Desktop/v1.1/Divisor_Algoritmico.sv
+C:/Users/danmayoral/Desktop/v1.1/tb_DivSec.sv
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

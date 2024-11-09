@@ -18,7 +18,7 @@
 
 `timescale 1ns/100ps
 
-module tb_DivSec;
+module tb_DivSec_lv1;
    
 
 

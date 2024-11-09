@@ -8,24 +8,16 @@ input logic [tamanyo-1:0] Den,
 
 output logic [tamanyo-1:0] Coc,
 output logic [tamanyo-1:0] Res,
-output Done);
+output logic Done);
 
 
-logic SignNum,SignDen,fin;
+logic SignNum,SignDen;
 logic [tamanyo-1:0] ACCU,Q,M;
 logic [$clog2(tamanyo-1)-1:0] Count;
 
 
-//localparam state, next_state;
-//
-//localparam d0 = 2'b00;
-//localparam d1 = 2'b01;
-//localparam d2 = 2'b10;
-//localparam d3 = 2'b11;
 
 enum {d0,d1,d2,d3} state;
-
-assign Done = fin;
 
 always_ff @(posedge CLK or negedge RSTa)
 
@@ -40,7 +32,7 @@ begin
 		case(state)
 
 		d0: begin
-			fin = 0;
+			Done <= 1'b0;
 			if(Start) begin
 				ACCU <= 0;
 				Count <= tamanyo-1;
@@ -55,14 +47,14 @@ begin
 		end 
   
 		d1: begin
-			fin <= 1'b0;
-			{ACCU,Q} <= {ACCU[tamanyo-2],Q,1'b0};
+			{ACCU,Q} <= {ACCU[tamanyo-2:0],Q,1'b0};
 			state <= d2;
+			Done <= 1'b0;
 		end 
 
 		d2: begin 
-			fin <= 1'b0;
-			Count <= Count +1;
+			Done <= 1'b0;
+			Count <= Count - 1;
 			if(ACCU >= M ) begin
 				Q<= Q+1;
 				ACCU <= ACCU-M;
@@ -74,7 +66,7 @@ begin
 		end
 		
 		d3: begin 
-			fin <= 1'b0;
+			Done <= 1'b1;
 			Coc <= (SignNum^SignDen)?(~Q+1):Q;
 			Res <= SignNum?(~ACCU+1):ACCU;
 			state <= d0;

@@ -18,4 +18,74 @@
 # Compile of Divisor_Algoritmico.sv was successful.
 # Compile of tb_DivSec_lv1.sv was successful.
 # Compile of tb_DivSec_lvl2.sv was successful.
-# 3 compiles, 0 failed with no errors.
+# Compile of Divisor_Segmentado.sv was successful.
+# Compile of tb_DivSec_lvl3.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Divisor_Algoritmico.sv was successful.
+# Compile of tb_DivSec_lv1.sv was successful.
+# Compile of tb_DivSec_lvl2.sv was successful.
+# Compile of Divisor_Segmentado.sv was successful.
+# Compile of tb_DivSec_lvl3.sv was successful.
+# Compile of tb_DivSeg.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.tb_DivSec_lvl3
+# vsim -gui work.tb_DivSec_lvl3 
+# Start time: 18:16:57 on Nov 22,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_DivSec_lvl3(fast)
+# Loading work.Divisor_Sementado(fast)
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Den is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 147
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Num is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 146
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Start is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 150
+# Error loading design
+# End time: 18:17:03 on Nov 22,2024, Elapsed time: 0:00:06
+# Errors: 3, Warnings: 5
+# Compile of Divisor_Algoritmico.sv was successful.
+# Compile of tb_DivSec_lv1.sv was successful.
+# Compile of tb_DivSec_lvl2.sv was successful.
+# Compile of Divisor_Segmentado.sv was successful.
+# Compile of tb_DivSec_lvl3.sv failed with 6 errors.
+# Compile of tb_DivSeg.sv was successful.
+# 6 compiles, 1 failed with 6 errors.
+# Compile of Divisor_Algoritmico.sv was successful.
+# Compile of tb_DivSec_lv1.sv was successful.
+# Compile of tb_DivSec_lvl2.sv was successful.
+# Compile of Divisor_Segmentado.sv was successful.
+# Compile of tb_DivSec_lvl3.sv failed with 2 errors.
+# Compile of tb_DivSeg.sv was successful.
+# 6 compiles, 1 failed with 2 errors.
+# Error opening C:/Users/danma/Desktop/v1.4/(vlog-13069) C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl3.sv
+# Path name 'C:/Users/danma/Desktop/v1.4/(vlog-13069) C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl3.sv' doesn't exist.
+# Compile of Divisor_Algoritmico.sv was successful.
+# Compile of tb_DivSec_lv1.sv was successful.
+# Compile of tb_DivSec_lvl2.sv was successful.
+# Compile of Divisor_Segmentado.sv was successful.
+# Compile of tb_DivSec_lvl3.sv was successful.
+# Compile of tb_DivSeg.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.tb_DivSec_lvl3
+# vsim -gui work.tb_DivSec_lvl3 
+# Start time: 18:31:12 on Nov 22,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_DivSec_lvl3(fast)
+# Loading work.Divisor_Sementado(fast)
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Den is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 147
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Num is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 146
+# ** Error (suppressible): (vsim-8440) Clocking block input divsec_if.cb.Start is not legal for the left hand side
+# of this or another expression.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_DivSec_lvl3 File: C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv Line: 150
+# Error loading design
+# End time: 18:31:17 on Nov 22,2024, Elapsed time: 0:00:05
+# Errors: 3, Warnings: 4

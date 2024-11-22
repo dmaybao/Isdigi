@@ -1,11 +1,27 @@
-C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
+C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl3.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\danma\Desktop\v1.4\tb_DivSec_lvl3.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module tb_DivSec_lvl3
+-- Compiling interface DivSecInterface
+
+Top level modules:
+	tb_DivSec_lvl3
+
+} {} {}} C:/Users/danma/Desktop/v1.4/tb_DivSeg.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\danma\Desktop\v1.4\tb_DivSeg.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module tb_DivSec_lvl3
+-- Compiling interface DivSecInterface
+
+Top level modules:
+	tb_DivSec_lvl3
+
+} {} {}} C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module tb_DivSec_lv1
 
 Top level modules:
 	tb_DivSec_lv1
 
-} {} {}} C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv}
+} {} {}} C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv
 QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 -- Compiling module Divisor_Algoritmico
 
@@ -18,5 +34,12 @@ QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
 
 Top level modules:
 	tb_DivSec_lvl2
+
+} {} {}} C:/Users/danma/Desktop/v1.4/Divisor_Segmentado.sv {1 {vlog -work work -vopt -sv -stats=none {C:\Users\danma\Desktop\v1.4\Divisor_Segmentado.sv}
+QuestaSim-64 vlog 2020.2 Compiler 2020.04 Apr 19 2020
+-- Compiling module Divisor_Sementado
+
+Top level modules:
+	Divisor_Sementado
 
 } {} {}}

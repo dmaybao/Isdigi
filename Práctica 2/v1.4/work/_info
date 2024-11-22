@@ -8,82 +8,191 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/questasim64_2020.2/examples
+Z0 dC:/questasim64_2020.2/examples
+T_opt
+!s110 1732291010
+VKi3oXdSDX6A2_=<FJa68;2
+04 14 4 work tb_DivSec_lvl2 fast 0
+=1-309c2390c275-6740a9c2-23d-25a8
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.2;71
+R0
+T_opt1
+!s110 1732286907
+VfG]ad91Ikm>HTOeIVQ2ko2
+04 13 4 work tb_DivSec_lv1 fast 0
+=1-309c2390c275-674099ba-19c-2878
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1732295818
+VMH;^3af:fBIPD8JVBUPd61
+04 14 4 work tb_DivSec_lvl3 fast 0
+=1-309c2390c275-6740bc89-2e2-1394
+R1
+R2
+n@_opt2
+R3
+R0
 vDivisor_Algoritmico
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1732273757
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1732296659
 !i10b 1
 !s100 mbf[kJS8@@XJZcRMiX1L11
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ITAFzmN[LWW9HNJRZImJ^;3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZ:]Ch4:L`mC`l^X:9=PDE0
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z3 dC:/Users/danma/Desktop/v1.4
+Z8 dC:/Users/danma/Desktop/v1.4
 w1732273615
-8C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv
-FC:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv
-!i122 0
+8C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv
+FC:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv
+!i122 55
 L0 1 89
-Z4 OL;L;2020.2;71
+Z9 OL;L;2020.2;71
 r1
 !s85 0
 31
-Z5 !s108 1732273757.000000
-!s107 C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv|
+Z10 !s108 1732296659.000000
+!s107 C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danma/Desktop/v1.4/Divisor_Algoritmico.sv|
 !i113 0
-Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 n@divisor_@algoritmico
+vDivisor_Sementado
+R4
+R5
+!i10b 1
+!s100 o6gUm`E8eV[kkZ3OkYBnM1
+R6
+IbSoGGn]W]Jb0FT@JJ2=h53
+R7
+S1
+R8
+w1732285958
+8C:\Users\danma\Desktop\v1.4\Divisor_Segmentado.sv
+FC:\Users\danma\Desktop\v1.4\Divisor_Segmentado.sv
+!i122 58
+L0 2 60
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:\Users\danma\Desktop\v1.4\Divisor_Segmentado.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danma\Desktop\v1.4\Divisor_Segmentado.sv|
+!i113 0
+R11
+R2
+n@divisor_@sementado
+YDivSecInterface
+R4
+!s110 1732296364
+!i10b 1
+!s100 >3QLTEk:>?U4FU7YdRReX3
+R6
+I;:oSLL9;NAbhTJSOkk_7:0
+R7
+!s105 tb_DivSec_lvl3_sv_unit
+S1
+R8
+w1732296360
+8C:\Users\danma\Desktop\v1.4\tb_DivSec_lvl3.sv
+FC:\Users\danma\Desktop\v1.4\tb_DivSec_lvl3.sv
+!i122 53
+L0 25 0
+R9
+r1
+!s85 0
+31
+!s108 1732296364.000000
+!s107 C:\Users\danma\Desktop\v1.4\tb_DivSec_lvl3.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danma\Desktop\v1.4\tb_DivSec_lvl3.sv|
+!i113 0
+R11
+R2
+n@div@sec@interface
 vtb_DivSec_lv1
-R0
-Z8 !s110 1732273758
+R4
+R5
 !i10b 1
 !s100 ]zm[2^W9lMT9IX_mA4kOI3
-R1
+R6
 I40l70@BAH;[z8M?CbceKJ2
-R2
+R7
 S1
-R3
+R8
 w1732038900
 8C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
 FC:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
-!i122 1
+!i122 56
 L0 21 88
-R4
+R9
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv|
 !i113 0
-R6
-R7
+R11
+R2
 ntb_@div@sec_lv1
 vtb_DivSec_lvl2
-R0
-R8
+R4
+R5
 !i10b 1
-!s100 cZ=nk4[k47>d<HU0]9DT@0
-R1
-I33I2VkVGX7E[zA62eeza[0
-R2
+!s100 X325m]AQIT2GJke3m^9Bd1
+R6
+II``Ki^jN447Y:C^5MH5O`2
+R7
 S1
-R3
-w1732054618
+R8
+w1732294428
 8C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv
 FC:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv
-!i122 2
-L0 21 121
-R4
+!i122 57
+L0 23 152
+R9
 r1
 !s85 0
 31
-!s108 1732273758.000000
+R10
 !s107 C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv|
 !i113 0
-R6
-R7
+R11
+R2
 ntb_@div@sec_lvl2
+vtb_DivSec_lvl3
+R4
+!s110 1732296660
+!i10b 1
+!s100 7m`Coe6nbEc`G@L=i1A6m1
+R6
+I>UzNRnooJlGJiYaY^OH0Y2
+R7
+S1
+R8
+w1732295086
+8C:\Users\danma\Desktop\v1.4\tb_DivSeg.sv
+FC:\Users\danma\Desktop\v1.4\tb_DivSeg.sv
+!i122 60
+L0 21 159
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:\Users\danma\Desktop\v1.4\tb_DivSeg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danma\Desktop\v1.4\tb_DivSeg.sv|
+!i113 0
+R11
+R2
+ntb_@div@sec_lvl3

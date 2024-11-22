@@ -1,3 +1,4 @@
+`timescale 1ns/100ps
 //-----------------------------------------------------------------------------
 // Universitat PolitÃ¨cnica de ValÃ¨ncia   |  2024-2025
 // Isdigi           3Âº Estit
@@ -16,7 +17,7 @@
 // Additional Comments:
 //-----------------------------------------------------------------------------
 
-`timescale 1ns/100ps
+
 
 module tb_DivSec_lvl2;
 
@@ -30,6 +31,9 @@ module tb_DivSec_lvl2;
     reg [tamanyo-1:0] Num;  // Numerador
     reg [tamanyo-1:0] Den;  // Denominador
 
+// Variables para la verificación
+    integer Num_signed, Den_signed, Coc_expected, Res_expected;
+
 // Señales de salida
     wire [tamanyo-1:0] Coc;  // Cociente
     wire [tamanyo-1:0] Res;  // Resto
@@ -41,11 +45,17 @@ class Bus;
 	rand logic [tamanyo-1:0] Num_value;
 	rand logic [tamanyo-1:0] Den_value;
 	// Limitaciones
-	constraint PosPos {Num_value[tamanyo-1]==1'b0 -> Den_value[tamanyo-1]==1'b0;};
-    	constraint PosNeg {Num_value[tamanyo-1]==1'b0 -> Den_value[tamanyo-1]==1'b1;};
-    	constraint NegPos {Num_value[tamanyo-1]==1'b1 -> Den_value[tamanyo-1]==1'b0;};
-    	constraint NegNeg {Num_value[tamanyo-1]==1'b1 -> Den_value[tamanyo-1]==1'b1;};
-    	constraint NoZero {Den_value != '0;};
+	    constraint SignRelationship {
+            if (Num_value[tamanyo-1] == 0) {
+                Den_value[tamanyo-1] == (Den_value[tamanyo-1] ? 1 : 0);
+            } else {
+                Den_value[tamanyo-1] == (Den_value[tamanyo-1] ? 1 : 0);
+        }
+    }
+
+    constraint NoZero {
+        Den_value != 0;
+    }
 endclass
 
 Bus bus_inst;
@@ -53,25 +63,25 @@ Bus bus_inst;
 // CoverGroup
 covergroup NumDen_CG;
     // Bins para Num
-    coverpoint Num {
+    coverpoint $signed(Num) {
         bins zero = {0};                          // Bin para valor cero
-        bins positive = {[1:127]};                // Bin para valores positivos (ejemplo para 8 bits)
-        bins negative = {[-128:-1]};              // Bin para valores negativos
+        bins positive = {[1:(1<<(tamanyo-1))-1]};                // Bin para valores positivos (ejemplo para 8 bits)
+        bins negative = {[-(1<<(tamanyo-1)):-1]};              // Bin para valores negativos
         bins max_value = {(1<<(tamanyo-1))-1};             // Bin para el valor máximo
         bins min_value = {-(1<<(tamanyo-1))};            // Bin para el valor mínimo
     }
 
     // Bins para Den
-    coverpoint Den {
+    coverpoint $signed(Den) {
         bins zero = {0};                          // Bin para valor cero (aunque tu constraint lo evita)
-        bins positive = {[1:127]};                // Bin para valores positivos
-        bins negative = {[-128:-1]};              // Bin para valores negativos
+        bins positive = {[1:(1<<(tamanyo-1))-1]};                // Bin para valores positivos
+        bins negative = {[-(1<<(tamanyo-1)):-1]};              // Bin para valores negativos
         bins max_value = {(1<<(tamanyo-1))-1};             // Bin para el valor máximo
         bins min_value = {-(1<<(tamanyo-1))};            // Bin para el valor mínimo
     }
 
     // Cross coverage
-    cross Num, Den {}
+    cross Num, Den;
 endgroup
 
 NumDen_CG cg_inst = new();
@@ -93,6 +103,10 @@ NumDen_CG cg_inst = new();
 
 // Pruebas
 initial begin
+    // Camptura 
+    $dumpfile("waves.vcd"); // Generar ondas en VCD
+    $dumpvars(0, tb_DivSec_lvl2); // Capturar todas las señales
+
     CLK = 0;
     RSTa = 1;
     Start = 0;
@@ -104,9 +118,13 @@ initial begin
 
     // Realizar pruebas aleatorias
     repeat (50) begin // Repetir 50 pruebas aleatorias
-        // Randomizar valores
-        assert(bus_inst.randomize()) else $fatal("Error al randomizar valores");
 
+        // Randomizar valores
+         assert(bus_inst.randomize()) else $fatal("Error al randomizar valores");
+
+        //if (!bus_inst.randomize()) begin
+        //    $fatal(1, "Error al randomizar valores");
+        //end
         // Asignar valores aleatorios al DUT
         Num = bus_inst.Num_value;
         Den = bus_inst.Den_value;
@@ -123,19 +141,33 @@ initial begin
         @(posedge Done);
 
         // Verificar resultados
-        if ((Coc !== Num / Den) || (Res !== Num % Den)) begin
-            $error("Error en la división: Num = %d, Den = %d, Coc = %d (esperado %d), Res = %d (esperado %d)",
-                   Num, Den, Coc, Num / Den, Res, Num % Den);
-        end else begin
-            $display("Prueba pasada: Num = %d, Den = %d, Coc = %d, Res = %d",
-                     Num, Den, Coc, Res);
+        
+            begin 
+
+                Num_signed = Num[tamanyo-1] ? -(~Num + 1) : Num;
+                Den_signed = Den[tamanyo-1] ? -(~Den + 1) : Den;
+                Coc_expected = (Num[tamanyo-1] ^ Den[tamanyo-1]) ? -(Num_signed / Den_signed) : (Num_signed / Den_signed);
+                Res_expected = Num[tamanyo-1] ? -(Num_signed % Den_signed) : (Num_signed % Den_signed);
+
+                if ((Coc !== Coc_expected) || (Res !== Res_expected)) begin
+                    $error("Error: Num=%d, Den=%d, Coc=%d (esperado=%d), Res=%d (esperado=%d)",
+                        Num, Den, Coc, Coc_expected, Res, Res_expected);
+                end else begin
+                    $display("Prueba pasada: Num=%d, Den=%d, Coc=%d, Res=%d", Num, Den, Coc, Res);
+                end             
+            end
         end
-    end
+    
+    
+    // Mensaje de éxito
+    $display("¡Simulación completada con éxito! Todas las pruebas pasaron correctamente.");
 
     // Mostrar cobertura funcional
     $display("Cobertura funcional alcanzada: %0.2f%%", cg_inst.get_coverage());
+    #1000
     $finish; // Terminar simulación
 end
+
 
 
 endmodule 

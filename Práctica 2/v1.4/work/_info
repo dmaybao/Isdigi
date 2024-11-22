@@ -1,0 +1,89 @@
+m255
+K4
+z2
+!s11f vlog 2020.2 2020.04, Apr 19 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2020.2/examples
+vDivisor_Algoritmico
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1732273757
+!i10b 1
+!s100 mbf[kJS8@@XJZcRMiX1L11
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ITAFzmN[LWW9HNJRZImJ^;3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/Users/danma/Desktop/v1.4
+w1732273615
+8C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv
+FC:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv
+!i122 0
+L0 1 89
+Z4 OL;L;2020.2;71
+r1
+!s85 0
+31
+Z5 !s108 1732273757.000000
+!s107 C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\Users\danma\Desktop\v1.4\Divisor_Algoritmico.sv|
+!i113 0
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@divisor_@algoritmico
+vtb_DivSec_lv1
+R0
+Z8 !s110 1732273758
+!i10b 1
+!s100 ]zm[2^W9lMT9IX_mA4kOI3
+R1
+I40l70@BAH;[z8M?CbceKJ2
+R2
+S1
+R3
+w1732038900
+8C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
+FC:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv
+!i122 1
+L0 21 88
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danma/Desktop/v1.4/tb_DivSec_lv1.sv|
+!i113 0
+R6
+R7
+ntb_@div@sec_lv1
+vtb_DivSec_lvl2
+R0
+R8
+!i10b 1
+!s100 cZ=nk4[k47>d<HU0]9DT@0
+R1
+I33I2VkVGX7E[zA62eeza[0
+R2
+S1
+R3
+w1732054618
+8C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv
+FC:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv
+!i122 2
+L0 21 121
+R4
+r1
+!s85 0
+31
+!s108 1732273758.000000
+!s107 C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/danma/Desktop/v1.4/tb_DivSec_lvl2.sv|
+!i113 0
+R6
+R7
+ntb_@div@sec_lvl2

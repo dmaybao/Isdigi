@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 24 21:43:02 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : DivSec
+Top-level Entity Name : Divisor_Segmentado
+Family : Cyclone IV E
+Total logic elements : 7,146
+    Total combinational functions : 2,213
+    Dedicated logic registers : 6,034
+Total registers : 6034
+Total pins : 132
+Total virtual pins : 0
+Total memory bits : 248
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -6,9 +6,9 @@ class Bus ;
 	rand logic [tamanyo-1:0] valor_Num;
 	rand logic [tamanyo-1:0] valor_Den;
 	constraint dospositivos {valor_Num[tamanyo-1]==1'b0 -> valor_Den[tamanyo-1]==1'b0;};  //los constraint limitan, es decir para todo valor de positivo_A que sea 0
-   constraint positivo_negativo {valor_Num[tamanyo-1]==1'b0 -> valor_Den[tamanyo-1]==1'b1;};  //los constraint limitan, es decir para todo valor de negativo_A que sea 1
-   constraint negativo_positivo {valor_Num[tamanyo-1]==1'b1 -> valor_Den[tamanyo-1]==1'b0;};  //los constraint limitan, es decir para todo valor de positivo_B que sea 0
-   constraint dosnegativos {valor_Num[tamanyo-1]==1'b1 -> valor_Den[tamanyo-1]==1'b1;};  //los constraint limitan, es decir para todo valor de negativo_B que sea 1
+    constraint positivo_negativo {valor_Num[tamanyo-1]==1'b0 -> valor_Den[tamanyo-1]==1'b1;};  //los constraint limitan, es decir para todo valor de negativo_A que sea 1
+    constraint negativo_positivo {valor_Num[tamanyo-1]==1'b1 -> valor_Den[tamanyo-1]==1'b0;};  //los constraint limitan, es decir para todo valor de positivo_B que sea 0
+    constraint dosnegativos {valor_Num[tamanyo-1]==1'b1 -> valor_Den[tamanyo-1]==1'b1;};  //los constraint limitan, es decir para todo valor de negativo_B que sea 1
 	constraint NoCero {valor_Den!='0;};
 endclass
 
@@ -35,12 +35,13 @@ endmodule
 `timescale 1ns/1ps
 
 interface test_if (
-  input bit CLK  , 
-  input bit  RSTa);
-  logic       Start      ;
-  logic       Done    ;
-  logic signed [tamanyo-1:0] Num,Den  ;
-  logic signed [tamanyo-1:0] Coc,Res;
+   input bit CLK  , 
+   input bit  RSTa
+   );
+   logic  Start;
+   logic  Done;
+   logic signed [tamanyo-1:0] Num,Den  ;
+   logic signed [tamanyo-1:0] Coc,Res;
 
   clocking md @(posedge CLK);
 	input #1ns Coc;
@@ -48,7 +49,7 @@ interface test_if (
 	input #1ns Num;
 	input #1ns Den;
 	input #1ns Start;
-   input #1ns Done;
+    input #1ns Done;
    endclocking:md;
 	
 	clocking sd @(posedge CLK);
@@ -65,12 +66,12 @@ interface test_if (
   	modport monitor (clocking md);
     modport test (clocking sd);
     modport duv (
-  		input          	CLK      ,
-  		input        	RSTa      ,
-  		output         Done  ,
-  		input         	Start   ,
-  		input  			Num  ,
-		input  			Den  ,
+  		input          	CLK,
+  		input        	RSTa,
+  		output          Done,
+  		input         	Start,
+  		input  			Num,
+		input  			Den,
   		output    		Coc,
 		output    		Res
 		);
